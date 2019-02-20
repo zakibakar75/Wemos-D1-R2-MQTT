@@ -1,0 +1,407 @@
+[
+    {
+        "id": "a732f10e.d35f6",
+        "type": "tab",
+        "label": "Wemos_RelayShield",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "41c0a380.d73c3c",
+        "type": "mqtt in",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "Wemos-Tx",
+        "qos": "2",
+        "broker": "97cd75f9.ee6138",
+        "x": 160,
+        "y": 40,
+        "wires": [
+            [
+                "c2dbbd3c.450c8"
+            ]
+        ]
+    },
+    {
+        "id": "f820c949.af9a28",
+        "type": "debug",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 470,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c2dbbd3c.450c8",
+        "type": "json",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 300,
+        "y": 40,
+        "wires": [
+            [
+                "f820c949.af9a28"
+            ]
+        ]
+    },
+    {
+        "id": "f0b2b66.ff3e748",
+        "type": "inject",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "",
+        "payload": "ON_LED",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 100,
+        "y": 140,
+        "wires": [
+            [
+                "d74f8523.a595f8"
+            ]
+        ]
+    },
+    {
+        "id": "d74f8523.a595f8",
+        "type": "mqtt out",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "Wemos-Rx",
+        "qos": "",
+        "retain": "",
+        "broker": "97cd75f9.ee6138",
+        "x": 290,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e9fa0943.c98228",
+        "type": "inject",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "",
+        "payload": "OFF_LED",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 500,
+        "y": 140,
+        "wires": [
+            [
+                "6f3aa3b0.3154cc"
+            ]
+        ]
+    },
+    {
+        "id": "6f3aa3b0.3154cc",
+        "type": "mqtt out",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "Wemos-Rx",
+        "qos": "",
+        "retain": "",
+        "broker": "97cd75f9.ee6138",
+        "x": 690,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "3f00cb0d.abcb24",
+        "type": "inject",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "",
+        "payload": "ON_R4",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "6070de20.b99e"
+            ]
+        ]
+    },
+    {
+        "id": "6070de20.b99e",
+        "type": "mqtt out",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "Wemos-Rx",
+        "qos": "",
+        "retain": "",
+        "broker": "97cd75f9.ee6138",
+        "x": 290,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "62bb598b.51d3d8",
+        "type": "inject",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "",
+        "payload": "OFF_R4",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 500,
+        "y": 220,
+        "wires": [
+            [
+                "e7aa562e.124b38"
+            ]
+        ]
+    },
+    {
+        "id": "e7aa562e.124b38",
+        "type": "mqtt out",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "Wemos-Rx",
+        "qos": "",
+        "retain": "",
+        "broker": "97cd75f9.ee6138",
+        "x": 690,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "782fd958.201248",
+        "type": "inject",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "",
+        "payload": "ON_R3",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 280,
+        "wires": [
+            [
+                "448343c1.4dad5c"
+            ]
+        ]
+    },
+    {
+        "id": "448343c1.4dad5c",
+        "type": "mqtt out",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "Wemos-Rx",
+        "qos": "",
+        "retain": "",
+        "broker": "97cd75f9.ee6138",
+        "x": 290,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "8a18dfaf.311f5",
+        "type": "inject",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "",
+        "payload": "OFF_R3",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 500,
+        "y": 280,
+        "wires": [
+            [
+                "ec4b76ca.a65f68"
+            ]
+        ]
+    },
+    {
+        "id": "ec4b76ca.a65f68",
+        "type": "mqtt out",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "Wemos-Rx",
+        "qos": "",
+        "retain": "",
+        "broker": "97cd75f9.ee6138",
+        "x": 690,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "3c4a37fc.ebd2f8",
+        "type": "inject",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "",
+        "payload": "ON_R2",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 340,
+        "wires": [
+            [
+                "95c5237d.640a5"
+            ]
+        ]
+    },
+    {
+        "id": "95c5237d.640a5",
+        "type": "mqtt out",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "Wemos-Rx",
+        "qos": "",
+        "retain": "",
+        "broker": "97cd75f9.ee6138",
+        "x": 290,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "28a0d4a7.e1fb1c",
+        "type": "inject",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "",
+        "payload": "OFF_R2",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 500,
+        "y": 340,
+        "wires": [
+            [
+                "f1fcdfc1.e845b"
+            ]
+        ]
+    },
+    {
+        "id": "f1fcdfc1.e845b",
+        "type": "mqtt out",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "Wemos-Rx",
+        "qos": "",
+        "retain": "",
+        "broker": "97cd75f9.ee6138",
+        "x": 690,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "3adb5add.537a36",
+        "type": "inject",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "",
+        "payload": "ON_R1",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 90,
+        "y": 400,
+        "wires": [
+            [
+                "88adb27d.c7dfb"
+            ]
+        ]
+    },
+    {
+        "id": "88adb27d.c7dfb",
+        "type": "mqtt out",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "Wemos-Rx",
+        "qos": "",
+        "retain": "",
+        "broker": "97cd75f9.ee6138",
+        "x": 290,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "a7d8fe6f.a6781",
+        "type": "inject",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "",
+        "payload": "OFF_R1",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "x": 500,
+        "y": 400,
+        "wires": [
+            [
+                "59c8e622.8b0018"
+            ]
+        ]
+    },
+    {
+        "id": "59c8e622.8b0018",
+        "type": "mqtt out",
+        "z": "a732f10e.d35f6",
+        "name": "",
+        "topic": "Wemos-Rx",
+        "qos": "",
+        "retain": "",
+        "broker": "97cd75f9.ee6138",
+        "x": 690,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "97cd75f9.ee6138",
+        "type": "mqtt-broker",
+        "z": "",
+        "name": "68.183.191.7",
+        "broker": "68.183.191.7",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    }
+]
