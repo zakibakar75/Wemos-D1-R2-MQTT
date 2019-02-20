@@ -12,7 +12,7 @@ PubSubClient mqttClient(client);
 
 const char* server = "68.183.191.7";    // MQTT server (of your choice)
 char ssid[] = "MyRouter";           // your network SSID (name)
-char pass[] = "motorolaradio";        // your network password
+char pass[] = "xxxxxxxxxx";        // your network password
 int status = WL_IDLE_STATUS;          // the Wifi radio's status
 
 /********** For any JSON packet creation ************/
