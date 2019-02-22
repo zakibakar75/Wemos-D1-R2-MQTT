@@ -69,7 +69,7 @@ void setup() {
     EEPROM.begin(512);      //Starting and setting size of the EEPROM
     delay(100);
 
-    //setup_RFM69();          //Setting up RFM69 radio
+    setup_RFM69();          //Setting up RFM69 radio
     
     //pinMode(16,OUTPUT);     //Pin 16 for LED
     pinMode(2,OUTPUT);      //Pin 2  for LED
