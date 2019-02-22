@@ -396,6 +396,7 @@ void callback(char* topic, byte* payload, unsigned int length) {
     // Send the message now!
     rf69.send((uint8_t *)sendtoSlaveCharPacket, strlen(sendtoSlaveCharPacket));
     rf69.waitPacketSent();
+      
   }
   
   if ( msgString.substring(0,1) == "4" ) {  //For SSID
@@ -423,6 +424,13 @@ void callback(char* topic, byte* payload, unsigned int length) {
     Serial.println( msgString.substring(5) );
     write_to_Memory(3,String(msgString.substring(5)));
     write_to_Memory(0,String("INUSE"));
+  }
+    
+  if ( msgString.substring(0,1) == "8" ) {  //For Reboot
+    Serial.print("Reboot Command Received : ");
+    Serial.println( msgString.substring(5) );
+    Serial.println("Reset..");
+    ESP.restart();
   }
   
 }
